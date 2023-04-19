@@ -1,5 +1,5 @@
 {% set name = "pypots" %}
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1973c608a09541899366ffe73dac828027d7ff7e446614e04fccdcea391e421e
+  sha256: 26159b7cb5538a41ae86903580f65f1ef5dbd31e76ae90c0e4bc97b41e4e67a8
 
 build:
   noarch: python
@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://github.com/WenjieDu/PyPOTS
-  summary: 'A Python Toolbox for Data Mining on Partially-Observed Time Series'
+  summary: A Python Toolbox for Data Mining on Partially-Observed Time Series
   description: |
     PyPOTS is born to become a handy toolbox that is going to make data mining on POTS easy rather than tedious, 
     to help engineers and researchers focus more on the core problems in their hands rather than on how to deal 
