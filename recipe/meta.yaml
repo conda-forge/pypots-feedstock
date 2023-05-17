@@ -10,9 +10,15 @@ source:
   sha256: 7eb7b19b84745f458300788b84a7cbc92fd4043b634e6a226e0038fe588ced47
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  noarch: python
+  script: |
+    python -m pip install --upgrade pip
+    pip install torch==1.13.1 -f https://download.pytorch.org/whl/cpu
+    pip install pypots
+    pip install torch-geometric torch-scatter torch-sparse -f "https://data.pyg.org/whl/torch-1.13.1+cpu.html"
+    pip install -e ".[dev]"
+    {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -20,9 +26,9 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - numpy >=1.23.3
-    - scikit-learn >=0.24.1
-    - pytorch >=1.11.0
+    - numpy
+    - scikit-learn
+    - pytorch >=1.10
     - scipy
     - tensorboard
     - pandas <2.0.0
@@ -40,7 +46,7 @@ test:
 
 about:
   home: https://github.com/WenjieDu/PyPOTS
-  summary: A Python Toolbox for Data Mining on Partially-Observed Time Series
+  summary: 'A Python Toolbox for Data Mining on Partially-Observed Time Series'
   description: |
     PyPOTS is born to become a handy toolbox that is going to make data mining on POTS easy rather than tedious, 
     to help engineers and researchers focus more on the core problems in their hands rather than on how to deal 
