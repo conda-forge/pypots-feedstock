@@ -1,14 +1,13 @@
 {% set name = "pypots" %}
-{% set version = "0.1" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/p/pypots/pypots-0.1.linux-x86_64.tar.gz
-  sha256: 0a2da347c33d746928dcd344f3d64dfd3140d35e8bb0e459703d0e2c79b95db3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7eb7b19b84745f458300788b84a7cbc92fd4043b634e6a226e0038fe588ced47
 
 build:
   noarch: python
