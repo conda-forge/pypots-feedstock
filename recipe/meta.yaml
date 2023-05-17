@@ -13,11 +13,11 @@ build:
   number: 0
   noarch: python
   script: |
-    python -m pip install --upgrade pip
-    pip install torch==1.13.1 -f https://download.pytorch.org/whl/cpu
-    pip install pypots
-    pip install torch-geometric torch-scatter torch-sparse -f "https://data.pyg.org/whl/torch-1.13.1+cpu.html"
-    pip install -e ".[dev]"
+    {{ PYTHON }} -m pip install --upgrade pip
+    {{ PYTHON }} -m pip install torch==1.13.1 -f https://download.pytorch.org/whl/cpu
+    {{ PYTHON }} -m pip install pypots
+    {{ PYTHON }} -m pip install torch-geometric torch-scatter torch-sparse -f "https://data.pyg.org/whl/torch-1.13.1+cpu.html"
+    {{ PYTHON }} -m pip install -e ".[dev]"
     {{ PYTHON }} -m pip install . -vv
 
 requirements:
