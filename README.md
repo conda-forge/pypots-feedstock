@@ -5,13 +5,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pypots-feedstoc
 
 Home: https://github.com/WenjieDu/PyPOTS
 
-Package license: GPL-3.0-only
+Package license: BSD-3-Clause
 
-Summary: A Python Toolbox for Data Mining on Partially-Observed Time Series
+Summary: a Python toolbox for machine learning on Partially-Observed Time Series
 
 Development: https://github.com/WenjieDu/PyPOTS
 
-Documentation: https://pypots.readthedocs.io
+Documentation: https://docs.pypots.com
 
 PyPOTS is born to become a handy toolbox that is going to make data mining on POTS easy rather than tedious,
 to help engineers and researchers focus more on the core problems in their hands rather than on how to deal
