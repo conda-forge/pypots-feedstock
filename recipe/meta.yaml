@@ -1,5 +1,5 @@
 {% set name = "pypots" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 313c59225e41ded94e3bf05606e370352e7c87701dc30aae4d4039bbc5e7b4ea
+  sha256: aef6e1c0b3319b4bc20d04d4e2054cf5b179684753e68e58cb0c82bf5f44936a
 
 build:
   noarch: python
@@ -18,29 +18,38 @@ requirements:
   host:
     - python >=3.7
     - pip
-  run:
-    - python >=3.7
-    - numpy >=1.23.3
-    - scikit-learn >=0.24.1
-    - pytorch >=1.11.0
+    - numpy
+    - scikit-learn
+    - pytorch >=1.10.0
     - scipy
     - tensorboard
     - pandas <2.0.0
     - h5py
-    - pycorruptor
-    - tsdb
+    - pygrinder >=0.2
+    - tsdb >=0.2
+  run:
+    - python >=3.7
 
 test:
   imports:
     - pypots
   requires:
     - pip
+    - numpy
+    - scikit-learn
+    - pytorch >=1.10.0
+    - scipy
+    - tensorboard
+    - pandas <2.0.0
+    - h5py
+    - pygrinder >=0.2
+    - tsdb >=0.2
   commands:
     - pip check
 
 about:
   home: https://github.com/WenjieDu/PyPOTS
-  summary: A Python Toolbox for Data Mining on Partially-Observed Time Series
+  summary: a Python toolbox for machine learning on Partially-Observed Time Series
   description: |
     PyPOTS is born to become a handy toolbox that is going to make data mining on POTS easy rather than tedious, 
     to help engineers and researchers focus more on the core problems in their hands rather than on how to deal 
@@ -48,9 +57,9 @@ about:
     data mining algorithms for partially-observed multivariate time series. For sure, besides various algorithms, 
     PyPOTS is going to have unified APIs together with detailed documentation and interactive examples across 
     algorithms as tutorials.
-  license: GPL-3.0-only
+  license: BSD-3-Clause
   license_file: LICENSE
-  doc_url: https://pypots.readthedocs.io
+  doc_url: https://docs.pypots.com
   dev_url: https://github.com/WenjieDu/PyPOTS
 
 extra:
