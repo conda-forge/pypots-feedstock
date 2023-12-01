@@ -18,22 +18,8 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - numpy
-    - scikit-learn
-    - pytorch >=1.10.0
-    - scipy
-    - tensorboard
-    - pandas <2.0.0
-    - h5py
-    - pygrinder >=0.2
-    - tsdb >=0.2
   run:
     - python >=3.7
-
-test:
-  imports:
-    - pypots
-  requires:
     - pip
     - numpy
     - scikit-learn
@@ -44,6 +30,12 @@ test:
     - h5py
     - pygrinder >=0.2
     - tsdb >=0.2
+
+test:
+  imports:
+    - pypots
+  # requires:
+  
   commands:
     - pip check
 
