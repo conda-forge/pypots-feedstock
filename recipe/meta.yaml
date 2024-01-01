@@ -1,5 +1,5 @@
 {% set name = "pypots" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0e8ced856decf7acc5ab8f4895f6079066fc3e6a9f0d787c367280ea533e6ed1
+  sha256: 693d7a6dd71d1d24c4b7d610361a1394bda5d67198c39ba8b1e13636c5b59980
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - packaging
   run:
     - python >=3.7
-    
+
 
 test:
   imports:
