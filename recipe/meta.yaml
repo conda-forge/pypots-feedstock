@@ -25,6 +25,7 @@ requirements:
     - tensorboard
     - pandas <2.0.0
     - h5py
+    - pyarrow
     - matplotlib
     - pygrinder >=0.2
     - tsdb >=0.2
@@ -45,6 +46,7 @@ test:
     - tensorboard
     - pandas <2.0.0
     - h5py
+    - pyarrow
     - matplotlib
     - pygrinder >=0.2
     - tsdb >=0.2
