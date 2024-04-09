@@ -25,6 +25,7 @@ requirements:
     - sympy
     - einops
     - pandas
+    - pyarrow
     - matplotlib
     - tensorboard
     - scikit-learn
@@ -46,6 +47,7 @@ test:
     - sympy
     - einops
     - pandas
+    - pyarrow
     - matplotlib
     - tensorboard
     - scikit-learn
