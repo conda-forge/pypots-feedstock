@@ -18,7 +18,8 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - pip
+  run:
+    - python >=3.8
     - h5py
     - numpy
     - scipy
@@ -33,29 +34,12 @@ requirements:
     - tsdb >=0.4
     - pygrinder >=0.6
     - benchpots >=0.1
-    - packaging
-  run:
-    - python >=3.8
 
 test:
   imports:
     - pypots
   requires:
     - pip
-    - h5py
-    - numpy
-    - scipy
-    - sympy
-    - einops
-    - pandas
-    - pyarrow
-    - matplotlib
-    - tensorboard
-    - scikit-learn
-    - pytorch >=1.10.0
-    - tsdb >=0.4
-    - pygrinder >=0.6
-    - benchpots >=0.1
   commands:
     - pip check
 
