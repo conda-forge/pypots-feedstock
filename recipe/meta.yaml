@@ -1,5 +1,5 @@
 {% set name = "pypots" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c35ea102a42495518e1d0395fbdfb36cfe3ae2397711de2c48612c82ce31a748
+  sha256: 4a91c3479a54d218bc951c1f2a27861889ad11119c40151e150d6dad774e2834
 
 build:
   noarch: python
@@ -19,12 +19,14 @@ requirements:
     - python >=3.8
     - pip
     - h5py
+    - tqdm
     - numpy
     - scipy
     - sympy
     - einops
     - pandas
     - pyarrow
+    - requests
     - matplotlib
     - tensorboard
     - scikit-learn
@@ -41,12 +43,14 @@ test:
   requires:
     - pip
     - h5py
+    - tqdm
     - numpy
     - scipy
     - sympy
     - einops
     - pandas
     - pyarrow
+    - requests
     - matplotlib
     - tensorboard
     - scikit-learn
