@@ -11,13 +11,15 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
     - python >=3.8
     - pip
+  run:
+    - python >=3.8
     - h5py
     - tqdm
     - numpy
@@ -27,39 +29,19 @@ requirements:
     - pandas
     - pyarrow
     - requests
+    - seaborn
     - matplotlib
     - tensorboard
     - scikit-learn
     - pytorch >=1.10.0
-    - tsdb >=0.4
+    - tsdb >=0.6
     - pygrinder >=0.6
-    - benchpots >=0.1
-  run:
-    - python >=3.8
+    - benchpots >=0.2
 
 test:
   imports:
     - pypots
-  requires:
-    - pip
-    - h5py
-    - tqdm
-    - numpy
-    - scipy
-    - sympy
-    - einops
-    - pandas
-    - pyarrow
-    - requests
-    - matplotlib
-    - tensorboard
-    - scikit-learn
-    - pytorch >=1.10.0
-    - tsdb >=0.4
-    - pygrinder >=0.6
-    - benchpots >=0.1
-  commands:
-    - pip check
+    - pypots.nn.modules
 
 about:
   home: https://github.com/WenjieDu/PyPOTS
