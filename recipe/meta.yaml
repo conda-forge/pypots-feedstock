@@ -34,6 +34,7 @@ requirements:
     - matplotlib
     - tensorboard
     - scikit-learn
+    - transformers
     - pytorch >=1.10.0
     - tsdb >=0.6
     - pygrinder >=0.6.4
