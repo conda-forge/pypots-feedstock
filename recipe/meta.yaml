@@ -1,5 +1,5 @@
 {% set name = "pypots" %}
-{% set version = "2.0" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5b60e4befc087a39ee8c6e9584160f25635bc793e93fe508a2ead9d8cdc014bc
+  sha256: 689d36c80168a29a15eeb4940d42b35b043ac5ebb20898d1abb44980483a06dd
 
 build:
   noarch: python
